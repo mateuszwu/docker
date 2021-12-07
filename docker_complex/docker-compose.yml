@@ -1,0 +1,51 @@
+version: "3.9"
+services:
+  rails:
+    build: .
+    depends_on:
+      - db
+      - redis
+      - sidekiq
+    volumes:
+      - bundler_gems:/usr/local/bundle/
+    environment:
+      REDIS_URL: redis://redis:6379
+      MEMCACHE_URL: memcached:11211
+  db:
+    image: postgres:11.14
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      PGDATA: /tmp
+  redis:
+    image: redis:latest
+    volumes:
+      - 'redis:/data'
+  sidekiq:
+    depends_on:
+      - db
+      - redis
+    build: .
+    command: bundle exec sidekiq -C config/sidekiq.yml
+    volumes:
+      - .:/app
+      - bundler_gems:/usr/local/bundle/
+    environment:
+      REDIS_URL: redis://redis:6379
+  memcached:
+    image: memcached:latest
+  nginx:
+    image: nginx:latest
+    ports:
+      - 80:80
+    depends_on:
+      - rails
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+
+volumes:
+  postgres:
+  bundler_gems:
+  redis:

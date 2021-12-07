@@ -1,0 +1,144 @@
+Started GET "/" for ::1 at 2021-10-11 22:15:24 +0200
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  
+pg (1.1.0) lib/pg.rb:56:in `initialize'
+pg (1.1.0) lib/pg.rb:56:in `new'
+pg (1.1.0) lib/pg.rb:56:in `connect'
+activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:684:in `connect'
+activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:215:in `initialize'
+activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:40:in `new'
+activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:40:in `postgresql_connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:809:in `new_connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `checkout_new_connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:832:in `try_to_checkout_new_connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:793:in `acquire_connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:521:in `checkout'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:380:in `connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1008:in `retrieve_connection'
+activerecord (5.2.1) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.1) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.1) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+[ActiveJob] [ScrapeJob] [ff14e557-a301-4942-aa0a-c1af5d5f2f2c] Performing ScrapeJob (Job ID: ff14e557-a301-4942-aa0a-c1af5d5f2f2c) from Sidekiq(default) with arguments: "www.selleo.com"
+[ActiveJob] [ScrapeJob] [64a974f3-43fa-4269-95c1-3579c323f901] Performing ScrapeJob (Job ID: 64a974f3-43fa-4269-95c1-3579c323f901) from Sidekiq(default) with arguments: "www.selleo.com"
+[ActiveJob] [ScrapeJob] [64a974f3-43fa-4269-95c1-3579c323f901] [ActionCable] Broadcasting to scrape_channel: {:message=>"Failed to open TCP connection to :80 (Cannot assign requested address - connect(2) for nil port 80)"}
+[ActiveJob] [ScrapeJob] [ff14e557-a301-4942-aa0a-c1af5d5f2f2c] [ActionCable] Broadcasting to scrape_channel: {:message=>"Failed to open TCP connection to :80 (Cannot assign requested address - connect(2) for nil port 80)"}
+[ActiveJob] [ScrapeJob] [64a974f3-43fa-4269-95c1-3579c323f901] Performed ScrapeJob (Job ID: 64a974f3-43fa-4269-95c1-3579c323f901) from Sidekiq(default) in 1462.8ms
+[ActiveJob] [ScrapeJob] [ff14e557-a301-4942-aa0a-c1af5d5f2f2c] Performed ScrapeJob (Job ID: ff14e557-a301-4942-aa0a-c1af5d5f2f2c) from Sidekiq(default) in 1511.59ms
+[ActiveJob] [ScrapeJob] [b92313c2-d1ad-49da-b6db-6187c883d4fe] Performing ScrapeJob (Job ID: b92313c2-d1ad-49da-b6db-6187c883d4fe) from Sidekiq(default) with arguments: "www.selleo.com"
+[ActiveJob] [ScrapeJob] [b92313c2-d1ad-49da-b6db-6187c883d4fe] [ActionCable] Broadcasting to scrape_channel: {:message=>"Failed to open TCP connection to :80 (Cannot assign requested address - connect(2) for nil port 80)"}
+[ActiveJob] [ScrapeJob] [b92313c2-d1ad-49da-b6db-6187c883d4fe] Performed ScrapeJob (Job ID: b92313c2-d1ad-49da-b6db-6187c883d4fe) from Sidekiq(default) in 535.52ms
+[ActiveJob] [ScrapeJob] [b4a006d9-ac0d-43bc-9369-b85dd3760c90] Performing ScrapeJob (Job ID: b4a006d9-ac0d-43bc-9369-b85dd3760c90) from Sidekiq(default) with arguments: "http://www.selleo.com"
+[ActiveJob] [ScrapeJob] [c27dbe8c-6a61-412e-9f74-90f0e65abf51] Performing ScrapeJob (Job ID: c27dbe8c-6a61-412e-9f74-90f0e65abf51) from Sidekiq(default) with arguments: "http://www.selleo.com"
+[ActiveJob] [ScrapeJob] [b4a006d9-ac0d-43bc-9369-b85dd3760c90]   [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ScrapeJob] [b4a006d9-ac0d-43bc-9369-b85dd3760c90]   ↳ app/jobs/scrape_job.rb:7
+[ActiveJob] [ScrapeJob] [b4a006d9-ac0d-43bc-9369-b85dd3760c90]   [1m[36mScrape Create (2.5ms)[0m  [1m[32mINSERT INTO "scrapes" ("url", "child", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["url", "http://www.selleo.com"], ["child", 6], ["created_at", "2021-10-12 19:45:44.003955"], ["updated_at", "2021-10-12 19:45:44.003955"]]
+[ActiveJob] [ScrapeJob] [b4a006d9-ac0d-43bc-9369-b85dd3760c90]   ↳ app/jobs/scrape_job.rb:7
+[ActiveJob] [ScrapeJob] [b4a006d9-ac0d-43bc-9369-b85dd3760c90]   [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ScrapeJob] [b4a006d9-ac0d-43bc-9369-b85dd3760c90]   ↳ app/jobs/scrape_job.rb:7
+[ActiveJob] [ScrapeJob] [b4a006d9-ac0d-43bc-9369-b85dd3760c90] [ActionCable] Broadcasting to scrape_channel: {:message=>"http://www.selleo.com - 6 kids"}
+[ActiveJob] [ScrapeJob] [b4a006d9-ac0d-43bc-9369-b85dd3760c90] Performed ScrapeJob (Job ID: b4a006d9-ac0d-43bc-9369-b85dd3760c90) from Sidekiq(default) in 978.85ms
+[ActiveJob] [ScrapeJob] [c27dbe8c-6a61-412e-9f74-90f0e65abf51]   [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ScrapeJob] [c27dbe8c-6a61-412e-9f74-90f0e65abf51]   ↳ app/jobs/scrape_job.rb:7
+[ActiveJob] [ScrapeJob] [c27dbe8c-6a61-412e-9f74-90f0e65abf51]   [1m[36mScrape Create (0.7ms)[0m  [1m[32mINSERT INTO "scrapes" ("url", "child", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["url", "http://www.selleo.com"], ["child", 6], ["created_at", "2021-10-12 19:45:44.295828"], ["updated_at", "2021-10-12 19:45:44.295828"]]
+[ActiveJob] [ScrapeJob] [c27dbe8c-6a61-412e-9f74-90f0e65abf51]   ↳ app/jobs/scrape_job.rb:7
+[ActiveJob] [ScrapeJob] [c27dbe8c-6a61-412e-9f74-90f0e65abf51]   [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ScrapeJob] [c27dbe8c-6a61-412e-9f74-90f0e65abf51]   ↳ app/jobs/scrape_job.rb:7
+[ActiveJob] [ScrapeJob] [c27dbe8c-6a61-412e-9f74-90f0e65abf51] [ActionCable] Broadcasting to scrape_channel: {:message=>"http://www.selleo.com - 6 kids"}
+[ActiveJob] [ScrapeJob] [c27dbe8c-6a61-412e-9f74-90f0e65abf51] Performed ScrapeJob (Job ID: c27dbe8c-6a61-412e-9f74-90f0e65abf51) from Sidekiq(default) in 352.23ms
+[ActiveJob] [ScrapeJob] [4578196a-ef42-47c5-84eb-4912ca240cd5] Performing ScrapeJob (Job ID: 4578196a-ef42-47c5-84eb-4912ca240cd5) from Sidekiq(default) with arguments: "http://www.selleo.com"
+[ActiveJob] [ScrapeJob] [4578196a-ef42-47c5-84eb-4912ca240cd5]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ScrapeJob] [4578196a-ef42-47c5-84eb-4912ca240cd5]   ↳ app/jobs/scrape_job.rb:7
+[ActiveJob] [ScrapeJob] [4578196a-ef42-47c5-84eb-4912ca240cd5]   [1m[36mScrape Create (0.5ms)[0m  [1m[32mINSERT INTO "scrapes" ("url", "child", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["url", "http://www.selleo.com"], ["child", 6], ["created_at", "2021-10-12 19:46:04.509605"], ["updated_at", "2021-10-12 19:46:04.509605"]]
+[ActiveJob] [ScrapeJob] [4578196a-ef42-47c5-84eb-4912ca240cd5]   ↳ app/jobs/scrape_job.rb:7
+[ActiveJob] [ScrapeJob] [4578196a-ef42-47c5-84eb-4912ca240cd5]   [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ScrapeJob] [4578196a-ef42-47c5-84eb-4912ca240cd5]   ↳ app/jobs/scrape_job.rb:7
+[ActiveJob] [ScrapeJob] [4578196a-ef42-47c5-84eb-4912ca240cd5] [ActionCable] Broadcasting to scrape_channel: {:message=>"http://www.selleo.com - 6 kids"}
+[ActiveJob] [ScrapeJob] [4578196a-ef42-47c5-84eb-4912ca240cd5] Performed ScrapeJob (Job ID: 4578196a-ef42-47c5-84eb-4912ca240cd5) from Sidekiq(default) in 130.51ms
+[ActiveJob] [ScrapeJob] [64cd1e9b-ba24-4ca5-87ec-866eb83c6a4d] Performing ScrapeJob (Job ID: 64cd1e9b-ba24-4ca5-87ec-866eb83c6a4d) from Sidekiq(default) with arguments: "http://www.google.com"
+[ActiveJob] [ScrapeJob] [64cd1e9b-ba24-4ca5-87ec-866eb83c6a4d]   [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ScrapeJob] [64cd1e9b-ba24-4ca5-87ec-866eb83c6a4d]   ↳ app/jobs/scrape_job.rb:7
+[ActiveJob] [ScrapeJob] [64cd1e9b-ba24-4ca5-87ec-866eb83c6a4d]   [1m[36mScrape Create (0.6ms)[0m  [1m[32mINSERT INTO "scrapes" ("url", "child", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["url", "http://www.google.com"], ["child", 152], ["created_at", "2021-10-12 19:46:09.928748"], ["updated_at", "2021-10-12 19:46:09.928748"]]
+[ActiveJob] [ScrapeJob] [64cd1e9b-ba24-4ca5-87ec-866eb83c6a4d]   ↳ app/jobs/scrape_job.rb:7
+[ActiveJob] [ScrapeJob] [64cd1e9b-ba24-4ca5-87ec-866eb83c6a4d]   [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ScrapeJob] [64cd1e9b-ba24-4ca5-87ec-866eb83c6a4d]   ↳ app/jobs/scrape_job.rb:7
+[ActiveJob] [ScrapeJob] [64cd1e9b-ba24-4ca5-87ec-866eb83c6a4d] [ActionCable] Broadcasting to scrape_channel: {:message=>"http://www.google.com - 152 kids"}
+[ActiveJob] [ScrapeJob] [64cd1e9b-ba24-4ca5-87ec-866eb83c6a4d] Performed ScrapeJob (Job ID: 64cd1e9b-ba24-4ca5-87ec-866eb83c6a4d) from Sidekiq(default) in 742.97ms
+[ActiveJob] [ScrapeJob] [ab430c5d-4d53-4ab7-b670-45a42ba1bde5] Performing ScrapeJob (Job ID: ab430c5d-4d53-4ab7-b670-45a42ba1bde5) from Sidekiq(default) with arguments: "http://www.selleo.com"
+[ActiveJob] [ScrapeJob] [ab430c5d-4d53-4ab7-b670-45a42ba1bde5]   [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ScrapeJob] [ab430c5d-4d53-4ab7-b670-45a42ba1bde5]   ↳ app/jobs/scrape_job.rb:7
+[ActiveJob] [ScrapeJob] [ab430c5d-4d53-4ab7-b670-45a42ba1bde5]   [1m[36mScrape Create (0.8ms)[0m  [1m[32mINSERT INTO "scrapes" ("url", "child", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["url", "http://www.selleo.com"], ["child", 6], ["created_at", "2021-10-12 19:49:13.109016"], ["updated_at", "2021-10-12 19:49:13.109016"]]
+[ActiveJob] [ScrapeJob] [ab430c5d-4d53-4ab7-b670-45a42ba1bde5]   ↳ app/jobs/scrape_job.rb:7
+[ActiveJob] [ScrapeJob] [ab430c5d-4d53-4ab7-b670-45a42ba1bde5]   [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ScrapeJob] [ab430c5d-4d53-4ab7-b670-45a42ba1bde5]   ↳ app/jobs/scrape_job.rb:7
+[ActiveJob] [ScrapeJob] [ab430c5d-4d53-4ab7-b670-45a42ba1bde5] [ActionCable] Broadcasting to scrape_channel: {:message=>"http://www.selleo.com - 6 kids"}
+[ActiveJob] [ScrapeJob] [ab430c5d-4d53-4ab7-b670-45a42ba1bde5] Performed ScrapeJob (Job ID: ab430c5d-4d53-4ab7-b670-45a42ba1bde5) from Sidekiq(default) in 1336.93ms
+[ActiveJob] [ScrapeJob] [708364d8-5af0-4fa4-8044-66e83e2dda5b] Performing ScrapeJob (Job ID: 708364d8-5af0-4fa4-8044-66e83e2dda5b) from Sidekiq(default) with arguments: "http://www.google.pl"
+[ActiveJob] [ScrapeJob] [708364d8-5af0-4fa4-8044-66e83e2dda5b]   [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ScrapeJob] [708364d8-5af0-4fa4-8044-66e83e2dda5b]   ↳ app/jobs/scrape_job.rb:7
+[ActiveJob] [ScrapeJob] [708364d8-5af0-4fa4-8044-66e83e2dda5b]   [1m[36mScrape Create (1.5ms)[0m  [1m[32mINSERT INTO "scrapes" ("url", "child", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["url", "http://www.google.pl"], ["child", 152], ["created_at", "2021-10-12 19:51:25.890256"], ["updated_at", "2021-10-12 19:51:25.890256"]]
+[ActiveJob] [ScrapeJob] [708364d8-5af0-4fa4-8044-66e83e2dda5b]   ↳ app/jobs/scrape_job.rb:7
+[ActiveJob] [ScrapeJob] [708364d8-5af0-4fa4-8044-66e83e2dda5b]   [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ScrapeJob] [708364d8-5af0-4fa4-8044-66e83e2dda5b]   ↳ app/jobs/scrape_job.rb:7
+[ActiveJob] [ScrapeJob] [708364d8-5af0-4fa4-8044-66e83e2dda5b] [ActionCable] Broadcasting to scrape_channel: {:message=>"http://www.google.pl - 152 kids"}
+[ActiveJob] [ScrapeJob] [708364d8-5af0-4fa4-8044-66e83e2dda5b] Performed ScrapeJob (Job ID: 708364d8-5af0-4fa4-8044-66e83e2dda5b) from Sidekiq(default) in 637.59ms
+[ActiveJob] [ScrapeJob] [59a31fa5-840f-4dee-b57c-5a39414711fb] Performing ScrapeJob (Job ID: 59a31fa5-840f-4dee-b57c-5a39414711fb) from Sidekiq(default) with arguments: "http://www.interia.pl"
+[ActiveJob] [ScrapeJob] [59a31fa5-840f-4dee-b57c-5a39414711fb]   [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ScrapeJob] [59a31fa5-840f-4dee-b57c-5a39414711fb]   ↳ app/jobs/scrape_job.rb:7
+[ActiveJob] [ScrapeJob] [59a31fa5-840f-4dee-b57c-5a39414711fb]   [1m[36mScrape Create (0.8ms)[0m  [1m[32mINSERT INTO "scrapes" ("url", "child", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["url", "http://www.interia.pl"], ["child", 19], ["created_at", "2021-10-12 19:55:31.506076"], ["updated_at", "2021-10-12 19:55:31.506076"]]
+[ActiveJob] [ScrapeJob] [59a31fa5-840f-4dee-b57c-5a39414711fb]   ↳ app/jobs/scrape_job.rb:7
+[ActiveJob] [ScrapeJob] [59a31fa5-840f-4dee-b57c-5a39414711fb]   [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ScrapeJob] [59a31fa5-840f-4dee-b57c-5a39414711fb]   ↳ app/jobs/scrape_job.rb:7
+[ActiveJob] [ScrapeJob] [59a31fa5-840f-4dee-b57c-5a39414711fb] [ActionCable] Broadcasting to scrape_channel: {:message=>"http://www.interia.pl - 19 kids"}
+[ActiveJob] [ScrapeJob] [59a31fa5-840f-4dee-b57c-5a39414711fb] Performed ScrapeJob (Job ID: 59a31fa5-840f-4dee-b57c-5a39414711fb) from Sidekiq(default) in 844.52ms
+[ActiveJob] [ScrapeJob] [11052920-872c-4054-84c3-657b288a4e05] Performing ScrapeJob (Job ID: 11052920-872c-4054-84c3-657b288a4e05) from Sidekiq(default) with arguments: "http://www.youtube.com"
+[ActiveJob] [ScrapeJob] [11052920-872c-4054-84c3-657b288a4e05]   [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ScrapeJob] [11052920-872c-4054-84c3-657b288a4e05]   ↳ app/jobs/scrape_job.rb:7
+[ActiveJob] [ScrapeJob] [11052920-872c-4054-84c3-657b288a4e05]   [1m[36mScrape Create (1.8ms)[0m  [1m[32mINSERT INTO "scrapes" ("url", "child", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["url", "http://www.youtube.com"], ["child", 2], ["created_at", "2021-10-12 20:41:10.035666"], ["updated_at", "2021-10-12 20:41:10.035666"]]
+[ActiveJob] [ScrapeJob] [11052920-872c-4054-84c3-657b288a4e05]   ↳ app/jobs/scrape_job.rb:7
+[ActiveJob] [ScrapeJob] [11052920-872c-4054-84c3-657b288a4e05]   [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ScrapeJob] [11052920-872c-4054-84c3-657b288a4e05]   ↳ app/jobs/scrape_job.rb:7
+[ActiveJob] [ScrapeJob] [11052920-872c-4054-84c3-657b288a4e05] [ActionCable] Broadcasting to scrape_channel: {:message=>"http://www.youtube.com - 2 kids"}
+[ActiveJob] [ScrapeJob] [11052920-872c-4054-84c3-657b288a4e05] Performed ScrapeJob (Job ID: 11052920-872c-4054-84c3-657b288a4e05) from Sidekiq(default) in 785.54ms
+[ActiveJob] [ScrapeJob] [83e9604f-7557-4b3e-b125-d53637bad88b] Performing ScrapeJob (Job ID: 83e9604f-7557-4b3e-b125-d53637bad88b) from Sidekiq(default) with arguments: "http://www.yahoo.com"
+[ActiveJob] [ScrapeJob] [83e9604f-7557-4b3e-b125-d53637bad88b]   [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ScrapeJob] [83e9604f-7557-4b3e-b125-d53637bad88b]   ↳ app/jobs/scrape_job.rb:7
+[ActiveJob] [ScrapeJob] [83e9604f-7557-4b3e-b125-d53637bad88b]   [1m[36mScrape Create (0.8ms)[0m  [1m[32mINSERT INTO "scrapes" ("url", "child", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["url", "http://www.yahoo.com"], ["child", 6], ["created_at", "2021-10-12 20:43:54.885330"], ["updated_at", "2021-10-12 20:43:54.885330"]]
+[ActiveJob] [ScrapeJob] [83e9604f-7557-4b3e-b125-d53637bad88b]   ↳ app/jobs/scrape_job.rb:7
+[ActiveJob] [ScrapeJob] [83e9604f-7557-4b3e-b125-d53637bad88b]   [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ScrapeJob] [83e9604f-7557-4b3e-b125-d53637bad88b]   ↳ app/jobs/scrape_job.rb:7
+[ActiveJob] [ScrapeJob] [83e9604f-7557-4b3e-b125-d53637bad88b] [ActionCable] Broadcasting to scrape_channel: {:message=>"http://www.yahoo.com - 6 kids"}
+[ActiveJob] [ScrapeJob] [83e9604f-7557-4b3e-b125-d53637bad88b] Performed ScrapeJob (Job ID: 83e9604f-7557-4b3e-b125-d53637bad88b) from Sidekiq(default) in 869.65ms
