@@ -9,6 +9,7 @@ services:
     volumes:
       - bundler_gems:/usr/local/bundle/
     environment:
+      DATABASE_URL: postgresql://postgres:postgres@db/sample_app_development
       REDIS_URL: redis://redis:6379
       MEMCACHE_URL: memcached:11211
   db:
@@ -18,6 +19,7 @@ services:
     environment:
       POSTGRES_PASSWORD: postgres
       POSTGRES_USER: postgres
+      POSTGRES_DB: sample_app_development
       PGDATA: /tmp
   redis:
     image: redis:latest
