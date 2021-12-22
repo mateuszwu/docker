@@ -3,11 +3,20 @@ FROM ruby:2.5.1
 ENV BUNDLER=1.16.2
 ENV NODE_VERSION=14.16.0
 
-RUN apt-get update && apt-get install -y \
-  wget \
-  build-essential \
-  libpq5 \
-  postgresql-client
+RUN apt-get update -qq && \
+  apt-get install -y \
+    wget \
+    # ca-certificates \
+    # apt-transport-https \
+    lsb-release && \
+    # update-ca-certificates && \
+    sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list' && \
+    wget --no-check-certificate -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
+RUN apt-get update -qq && \
+  apt-get install -y \
+    build-essential \
+    libpq5 \
+    postgresql-client-11
 RUN wget http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.xz
 RUN tar -xJvf node-v$NODE_VERSION-linux-x64.tar.xz -C /usr/bin
 ENV PATH "$PATH:/usr/bin/node-v$NODE_VERSION-linux-x64/bin/"
